@@ -18,7 +18,7 @@ myfile02 = open('mem.txt', mode='a', encoding='UTF-8')
 members = ['신유빈', '김진호', '하형주']
 
 for idx in range(len(members)):
-    message = '%d번째 고객님 : %s님\n' % (idx + 1, members[idx])
+    message = '%d번째 고객님 : %s님\n' % (idx+1, members[idx])
     myfile02.write(message)
 # end for
 

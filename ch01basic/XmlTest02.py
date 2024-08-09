@@ -1,13 +1,12 @@
 from xml.etree.ElementTree import Element, ElementTree, SubElement
 
 mydict = {
-    'hong': ('홍길동', 60, 80, 70),
-    'park': ('박영희', 50, 70, 95)
+    'hong':('홍길동', 60, 80, 70),
+    'park':('박영희', 50, 70, 95)
 }
 print(mydict)
 
-# Element를 사용하면 가장 최상단에 자동으로 임포트 된다.
-xmlData = Element('students')  # 루트 엘리먼트
+xmlData = Element('students') # 루트 엘리먼트
 
 for key, mytuple in mydict.items():
     # print(key)
@@ -15,9 +14,9 @@ for key, mytuple in mydict.items():
     saram = SubElement(xmlData, 'student')
     saram.attrib['id'] = key
 
-    kor = (mytuple[1])
-    eng = (mytuple[2])
-    math = (mytuple[3])
+    kor = mytuple[1]
+    eng = mytuple[2]
+    math = mytuple[3]
 
     total = kor + eng + math
     average = total / 3.0
@@ -29,9 +28,8 @@ for key, mytuple in mydict.items():
     SubElement(saram, '국어').text = str(kor)
     SubElement(saram, '영어').text = str(eng)
     SubElement(saram, '수학').text = str(math)
-
-
 # end for
+
 
 def indent(elem, level=0):
     mytab = '\t'
@@ -52,8 +50,6 @@ def indent(elem, level=0):
     else:
         if level and (not elem.tail or not elem.tail.strip()):
             elem.tail = i
-
-
 # end def
 
 
@@ -62,4 +58,4 @@ indent(xmlData)
 xmlFile = 'xmlTest_02.xml'
 ElementTree(xmlData).write(xmlFile, encoding='UTF-8')
 
-print(xmlFile + '파일이 생성되었습니다.')
+print(xmlFile + ' 파일이 생성되었습니다.')

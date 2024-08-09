@@ -1,11 +1,8 @@
-# 자바에서의 프린트 = print('이름 입력 : ', end='')
-#  자바에서의 프린트LN = print('이름 입력 : ')
-
 print('이름 입력 : ', end='')
 name = input()
 
-#  input 함수는 반환 타입이 문자열입니다.
-age = int(input('나이 입력 : '))
+# input 함수는 반환 타입이 문자열입니다.
+age = int(input('나이 입력 :'))
 height = float(input('키 입력 :'))
 
 print('% 포맷 코드로 출력')

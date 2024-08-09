@@ -1,6 +1,6 @@
 humanDict = {
-    'age':20, 'name':'유현식', 'hobby' : '독서',
-    'address' : {'city':'seoul', 'gu':'마포구', 'zipcode':'12345'}
+    'age':20, 'name':'유현식', 'hobby':'독서',
+    'address':{'city':'seoul', 'gu':'마포구', 'zipcode':'12345'}
 }
 print(type(humanDict))
 print(humanDict)
@@ -12,9 +12,8 @@ print(humanString)
 
 humanJson = json.loads(humanString)
 print('이름 : %s' % humanJson['name'])
-print('나이 : %s' % humanJson['age'])
 print('취미 : %s' % humanJson['hobby'])
+print('나이 : %s' % humanJson['age'])
 print('시도 : %s' % humanJson['address']['city'])
 print('군구 : %s' % humanJson['address']['gu'])
 print('우편 번호 : %s' % humanJson['address']['zipcode'])
-

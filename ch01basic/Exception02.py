@@ -7,11 +7,10 @@ def girlFriendCheck(findName):
         print(message)
     else:
         message = '\'%s\'님은 여자 친구 멤버가 아닙니다.' % findName
-        # 자바에서 throw 파이썬에서는 raise
         raise Exception(message)
 # end def
 
-name = '예린'
+name = '소원'
 
 try:
     girlFriendCheck(name)
